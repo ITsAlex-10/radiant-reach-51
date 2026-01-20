@@ -10,6 +10,7 @@ const Index = lazy(() => import("./pages/Index"));
 const Servicos = lazy(() => import("./pages/Servicos"));
 const Parceiros = lazy(() => import("./pages/Parceiros"));
 const Contacto = lazy(() => import("./pages/Contacto"));
+const Recrutamento = lazy(() => import("./pages/Recrutamento"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -23,10 +24,11 @@ const App = () => (
           <BrowserRouter>
             <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div></div>}>
               <Routes>
-                <Route path="/" element={<Index />} />
+              <Route path="/" element={<Index />} />
                 <Route path="/servicos" element={<Servicos />} />
                 <Route path="/parceiros" element={<Parceiros />} />
                 <Route path="/contacto" element={<Contacto />} />
+                <Route path="/recrutamento" element={<Recrutamento />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
