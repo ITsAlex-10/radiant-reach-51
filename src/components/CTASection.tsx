@@ -1,6 +1,4 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Phone } from "lucide-react";
 import ContactCTAButton from "./ContactCTAButton";
 const CTASection = () => {
   return <section className="py-20 bg-primary relative overflow-hidden">
@@ -33,12 +31,6 @@ const CTASection = () => {
             <ContactCTAButton href="/contacto" className="w-full sm:w-auto">
               Peça Avaliação Gratuita
             </ContactCTAButton>
-            <a href="tel:+351123456789">
-              <Button variant="heroOutline" size="xl" className="w-full sm:w-auto">
-                <Phone className="w-5 h-5 mr-2" />
-                Ligar Agora
-              </Button>
-            </a>
           </div>
         </motion.div>
       </div>
