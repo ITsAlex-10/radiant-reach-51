@@ -2,10 +2,8 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import ContactCTAButton from "./ContactCTAButton";
-
 const CTASection = () => {
-  return (
-    <section className="py-20 bg-primary relative overflow-hidden">
+  return <section className="py-20 bg-primary relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full -translate-x-1/2 -translate-y-1/2" />
@@ -13,15 +11,19 @@ const CTASection = () => {
       </div>
 
       <div className="container-custom relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 30
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} viewport={{
+        once: true
+      }} transition={{
+        duration: 0.6
+      }} className="text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl text-white mb-4">
-            Precisa de um orçamento?
+            Tem um projeto em mente?    
           </h2>
           <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
             Contacte-nos para uma avaliação gratuita e sem compromisso. A nossa
@@ -32,11 +34,7 @@ const CTASection = () => {
               Peça Avaliação Gratuita
             </ContactCTAButton>
             <a href="tel:+351123456789">
-              <Button
-                variant="heroOutline"
-                size="xl"
-                className="w-full sm:w-auto"
-              >
+              <Button variant="heroOutline" size="xl" className="w-full sm:w-auto">
                 <Phone className="w-5 h-5 mr-2" />
                 Ligar Agora
               </Button>
@@ -44,8 +42,6 @@ const CTASection = () => {
           </div>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default CTASection;
