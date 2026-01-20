@@ -18,15 +18,15 @@ const Partners = () => {
   return (
     <section id="parcerias" className="py-12 bg-muted overflow-hidden">
       <div className="container-custom mb-6">
-        <motion.h3
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center text-lg text-muted-foreground"
+          className="text-center text-2xl md:text-3xl text-primary"
         >
           Parceiros de Confiança
-        </motion.h3>
+        </motion.h2>
       </div>
 
       {/* Infinite Marquee */}
@@ -40,7 +40,7 @@ const Partners = () => {
             x: {
               repeat: Infinity,
               repeatType: "loop",
-              duration: 40,
+              duration: 30,
               ease: "linear",
             },
           }}
