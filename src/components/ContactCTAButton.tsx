@@ -19,6 +19,9 @@ const ContactCTAButton = ({
   className,
   animated = false,
 }: ContactCTAButtonProps) => {
+  // Header button (animated) uses #345093, all others use #3A445C
+  const buttonBackground = animated ? "#345093" : "#3A445C";
+  
   const buttonContent = (
     <Link
       to={href}
@@ -30,7 +33,7 @@ const ContactCTAButton = ({
         justifyContent: "center",
         padding: "14px 28px",
         borderRadius: 16,
-        background: "#345093",
+        background: buttonBackground,
         color: "#fff",
         fontWeight: 600,
         textDecoration: "none",
