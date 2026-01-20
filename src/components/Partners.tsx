@@ -40,7 +40,7 @@ const Partners = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl text-primary mb-4">
             Parcerias
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -81,7 +81,7 @@ const Partners = () => {
                   className="flex-shrink-0 w-1/2 md:w-1/3 lg:w-1/4"
                 >
                   <div className="bg-white rounded-lg p-8 h-32 flex items-center justify-center shadow-card hover:shadow-card-hover transition-all duration-300 group cursor-pointer relative">
-                    <span className="font-heading font-bold text-xl text-primary group-hover:text-accent transition-colors duration-300">
+                    <span className="font-body font-medium text-xl text-primary group-hover:text-accent transition-colors duration-300">
                       {partner.name}
                     </span>
                     

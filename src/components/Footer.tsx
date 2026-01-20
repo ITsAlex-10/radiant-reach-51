@@ -9,11 +9,11 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center font-heading font-bold text-xl">
+              <div className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center font-body font-medium text-xl">
                 JF
               </div>
               <div>
-                <h3 className="font-heading font-bold">Joaquim & Fernandes</h3>
+                <h3 className="font-body font-medium">Joaquim & Fernandes</h3>
                 <p className="text-sm text-white/60">Lda</p>
               </div>
             </div>
@@ -48,7 +48,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-heading font-bold text-lg mb-6">Links Úteis</h4>
+            <h4 className="font-body font-medium text-lg mb-6">Links Úteis</h4>
             <ul className="space-y-3">
               <li>
                 <Link
@@ -87,7 +87,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="font-heading font-bold text-lg mb-6">Serviços</h4>
+            <h4 className="font-body font-medium text-lg mb-6">Serviços</h4>
             <ul className="space-y-3">
               <li>
                 <Link
@@ -126,7 +126,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-heading font-bold text-lg mb-6">Contactos</h4>
+            <h4 className="font-body font-medium text-lg mb-6">Contactos</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />

@@ -46,7 +46,7 @@ const Services = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl text-primary mb-4">
             Os Nossos Serviços
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -69,7 +69,7 @@ const Services = () => {
               <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent transition-colors duration-300">
                 <service.icon className="w-8 h-8 text-accent group-hover:text-white transition-colors duration-300" />
               </div>
-              <h3 className="text-xl font-bold text-primary mb-3">
+              <h3 className="text-xl text-primary mb-3 font-body font-medium">
                 {service.title}
               </h3>
               <p className="text-muted-foreground mb-6 leading-relaxed">

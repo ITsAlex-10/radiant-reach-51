@@ -41,7 +41,7 @@ const Header = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
           <div
-            className={`w-12 h-12 rounded-full border-2 flex items-center justify-center font-heading font-bold text-xl transition-all duration-300 ${
+            className={`w-12 h-12 rounded-full border-2 flex items-center justify-center font-body font-medium text-xl transition-all duration-300 ${
               isScrolled
                 ? "border-primary text-primary"
                 : "border-white text-white"
@@ -50,7 +50,7 @@ const Header = () => {
             JF
           </div>
           <span
-            className={`hidden sm:block font-heading font-semibold text-sm transition-colors duration-300 ${
+            className={`hidden sm:block font-body font-medium text-sm transition-colors duration-300 ${
               isScrolled ? "text-primary" : "text-white"
             }`}
           >
@@ -64,7 +64,7 @@ const Header = () => {
             <Link
               key={link.name}
               to={link.href}
-              className={`font-heading font-medium text-sm uppercase tracking-wider transition-colors duration-300 hover:text-accent ${
+              className={`font-body font-medium text-sm uppercase tracking-wider transition-colors duration-300 hover:text-accent ${
                 isScrolled ? "text-primary" : "text-white"
               } ${isActive(link.href) ? "text-accent" : ""}`}
             >
@@ -108,7 +108,7 @@ const Header = () => {
                 <Link
                   key={link.name}
                   to={link.href}
-                  className={`font-heading font-medium text-base py-2 transition-colors hover:text-accent ${
+                  className={`font-body font-medium text-base py-2 transition-colors hover:text-accent ${
                     isActive(link.href) ? "text-accent" : "text-primary"
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}

@@ -52,7 +52,7 @@ const Contacto = () => {
               transition={{ duration: 0.6 }}
               className="text-center text-white"
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl mb-6">
                 Contacte-nos
               </h1>
               <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
@@ -74,7 +74,7 @@ const Contacto = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-3xl font-bold text-primary mb-6">
+                <h2 className="text-3xl text-primary mb-6">
                   Peça um Orçamento
                 </h2>
                 <p className="text-muted-foreground mb-8">
@@ -164,7 +164,7 @@ const Contacto = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-3xl font-bold text-primary mb-6">
+                <h2 className="text-3xl text-primary mb-6">
                   Informações de Contacto
                 </h2>
 
@@ -174,7 +174,7 @@ const Contacto = () => {
                       <Phone className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-heading font-bold text-primary mb-1">
+                      <h3 className="font-body font-medium text-primary mb-1">
                         Telefone
                       </h3>
                       <a
@@ -191,7 +191,7 @@ const Contacto = () => {
                       <Mail className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-heading font-bold text-primary mb-1">
+                      <h3 className="font-body font-medium text-primary mb-1">
                         Email
                       </h3>
                       <a
@@ -208,7 +208,7 @@ const Contacto = () => {
                       <MapPin className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-heading font-bold text-primary mb-1">
+                      <h3 className="font-body font-medium text-primary mb-1">
                         Morada
                       </h3>
                       <p className="text-muted-foreground">
@@ -224,7 +224,7 @@ const Contacto = () => {
                       <Clock className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-heading font-bold text-primary mb-1">
+                      <h3 className="font-body font-medium text-primary mb-1">
                         Horário
                       </h3>
                       <p className="text-muted-foreground">
@@ -238,7 +238,7 @@ const Contacto = () => {
 
                 {/* Why Contact Us */}
                 <div className="bg-primary rounded-xl p-6 text-white">
-                  <h3 className="font-heading font-bold text-lg mb-4">
+                  <h3 className="font-body font-medium text-lg mb-4">
                     Porquê contactar-nos?
                   </h3>
                   <ul className="space-y-3">
