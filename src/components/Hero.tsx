@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Lightbulb } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
+import ContactCTAButton from "./ContactCTAButton";
 
 const Hero = () => {
   return (
@@ -50,16 +51,12 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Link to="/contacto">
-                <Button variant="heroCta" size="xl">
-                  Peça um Orçamento
-                </Button>
-              </Link>
-              <Link to="/contacto">
-                <Button variant="heroOutline" size="xl">
-                  Contacte-nos
-                </Button>
-              </Link>
+              <ContactCTAButton href="/contacto">
+                Peça um Orçamento
+              </ContactCTAButton>
+              <ContactCTAButton href="/contacto">
+                Contacte-nos
+              </ContactCTAButton>
             </motion.div>
           </div>
 
