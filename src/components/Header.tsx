@@ -36,7 +36,7 @@ const Header = () => {
       <div className="container-custom flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
-          <img src={logo} alt="Joaquim & Fernandes Logo" className="w-12 h-12 rounded-full object-cover" />
+          <img src={logo} alt="Joaquim & Fernandes Logo" className="w-16 h-16 rounded-full object-cover" />
         </Link>
 
         {/* Desktop Navigation + CTA - aligned right */}
