@@ -30,21 +30,20 @@ const Partners = () => {
       </div>
 
       {/* Infinite Marquee */}
-      <div className="relative">
+      <div className="relative flex overflow-hidden">
         <motion.div
           className="flex gap-12 items-center"
           animate={{
-            x: [0, -50 * partners.length + "%"],
+            x: ["0%", "-50%"],
           }}
           transition={{
             x: {
               repeat: Infinity,
               repeatType: "loop",
-              duration: 20,
+              duration: 40,
               ease: "linear",
             },
           }}
-          style={{ width: "fit-content" }}
         >
           {duplicatedPartners.map((partner, index) => (
             <div
