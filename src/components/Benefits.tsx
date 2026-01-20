@@ -1,77 +1,75 @@
 import { motion } from "framer-motion";
-import { Award, Shield, Users, Clock, ThumbsUp } from "lucide-react";
+import { Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import benefitsImage from "@/assets/benefits-image.jpg";
 
 const benefits = [
-  {
-    icon: Award,
-    title: "Experiência",
-    description: "Mais de 20 anos de experiência no setor da eletricidade e construção.",
-  },
-  {
-    icon: Shield,
-    title: "Qualidade Certificada",
-    description: "Trabalho certificado e em conformidade com todas as normas de segurança.",
-  },
-  {
-    icon: Users,
-    title: "Atendimento Personalizado",
-    description: "Acompanhamento dedicado em cada projeto, do início ao fim.",
-  },
-  {
-    icon: Clock,
-    title: "Pontualidade",
-    description: "Cumprimento rigoroso de prazos e compromissos assumidos.",
-  },
-  {
-    icon: ThumbsUp,
-    title: "Confiança",
-    description: "Centenas de clientes satisfeitos confiam no nosso trabalho.",
-  },
+  "Experiência desde 1986",
+  "Equipa Técnica Certificada",
+  "Soluções Chave-na-mão",
+  "Apoio 24/7",
 ];
 
 const Benefits = () => {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-background">
       <div className="container-custom">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl text-primary mb-4">
-            Porquê Escolher-nos?
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Somos uma empresa de referência no setor, reconhecida pela qualidade
-            e profissionalismo dos nossos serviços.
-          </p>
-        </motion.div>
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Image */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <img
+              src={benefitsImage}
+              alt="Trabalhos de eletricidade"
+              className="w-full h-auto rounded-2xl shadow-xl"
+            />
+          </motion.div>
 
-        {/* Benefits Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {benefits.map((benefit, index) => (
-            <motion.div
-              key={benefit.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="text-center group"
-            >
-              <div className="w-20 h-20 mx-auto rounded-full bg-muted flex items-center justify-center mb-5 group-hover:bg-accent transition-colors duration-300">
-                <benefit.icon className="w-10 h-10 text-accent group-hover:text-white transition-colors duration-300" />
-              </div>
-              <h3 className="text-lg text-primary mb-2 font-body font-medium">
-                {benefit.title}
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {benefit.description}
-              </p>
-            </motion.div>
-          ))}
+          {/* Content */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <h2 className="text-3xl md:text-4xl lg:text-5xl text-primary mb-6">
+              Porquê escolher a Joaquim & Fernandes?
+            </h2>
+            <p className="text-muted-foreground mb-8 leading-relaxed">
+              Combinamos décadas de experiência com as tecnologias mais recentes para entregar
+              projetos seguros e eficientes. O nosso compromisso é com a qualidade e o
+              cumprimento de prazos.
+            </p>
+
+            {/* Benefits Grid */}
+            <div className="grid grid-cols-2 gap-4 mb-8">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={benefit}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+                  className="flex items-center gap-3 p-4 border border-border rounded-lg bg-background"
+                >
+                  <Check className="w-5 h-5 text-accent flex-shrink-0" />
+                  <span className="text-sm font-medium text-primary">{benefit}</span>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* CTA Button */}
+            <Link to="/servicos">
+              <Button className="bg-primary hover:bg-primary/90 text-white font-body font-medium uppercase tracking-wider px-8 py-6">
+                Conheça os Nossos Serviços
+              </Button>
+            </Link>
+          </motion.div>
         </div>
       </div>
     </section>
