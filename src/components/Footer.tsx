@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <img src={logo} alt="Joaquim & Fernandes Logo" className="w-12 h-12 rounded-full object-cover" />
+              <img src={logo} alt="Joaquim & Fernandes Logo" className="w-16 h-16 rounded-full object-cover" />
               <div>
                 
                 
