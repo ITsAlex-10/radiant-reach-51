@@ -4,67 +4,82 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
-import { Zap, Car, PartyPopper, Hammer, CheckCircle } from "lucide-react";
+import { FileText, Activity, Wrench, Zap, BatteryCharging, CheckCircle } from "lucide-react";
 
 const services = [
   {
-    id: "eletricidade",
-    icon: Zap,
-    title: "Eletricidade Geral",
+    id: "projetos",
+    icon: FileText,
+    title: "Projetos",
     description:
-      "Oferecemos soluções completas de instalações elétricas para habitações, comércios e indústrias. A nossa equipa qualificada garante segurança e eficiência em cada projeto.",
+      "Desenvolvimento de projetos de engenharia elétrica, licenciamento e consultoria técnica especializada para garantir a conformidade e eficiência das suas instalações.",
     features: [
-      "Instalações elétricas residenciais e comerciais",
-      "Quadros elétricos e distribuição",
-      "Reparações e manutenção preventiva",
-      "Certificação de instalações",
-      "Projetos de iluminação interior e exterior",
-      "Sistemas de proteção contra descargas atmosféricas",
+      "Projetos de instalações elétricas",
+      "Licenciamento junto das entidades competentes",
+      "Consultoria técnica especializada",
+      "Estudos de viabilidade",
+      "Dimensionamento de sistemas",
+      "Acompanhamento de obras",
     ],
   },
   {
-    id: "mobilidade",
-    icon: Car,
-    title: "Mobilidade Elétrica",
+    id: "plrs",
+    icon: Activity,
+    title: "PLR's",
     description:
-      "Preparamos o seu espaço para o futuro da mobilidade com instalação profissional de postos de carregamento para veículos elétricos.",
+      "Execução de Postos de Ligação à Rede e infraestruturas para ligação à rede de distribuição, garantindo a conformidade com as normas técnicas.",
     features: [
-      "Instalação de wallboxes domésticas",
-      "Postos de carregamento comerciais",
-      "Soluções para condomínios",
+      "Postos de Ligação à Rede (PLR)",
+      "Infraestruturas de ligação",
+      "Ligação à rede de distribuição",
+      "Conformidade com normas técnicas",
+      "Coordenação com operadores de rede",
+      "Ensaios e certificação",
+    ],
+  },
+  {
+    id: "instalacoes",
+    icon: Wrench,
+    title: "Instalações",
+    description:
+      "Instalações elétricas de Baixa e Média Tensão para indústria, comércio e habitação, com qualidade e segurança certificada.",
+    features: [
+      "Instalações de Baixa Tensão",
+      "Instalações de Média Tensão",
+      "Quadros elétricos e distribuição",
+      "Instalações industriais",
+      "Instalações comerciais",
+      "Instalações residenciais",
+    ],
+  },
+  {
+    id: "postos-transformacao",
+    icon: Zap,
+    title: "Postos de Transformação",
+    description:
+      "Montagem, manutenção e ensaios de Postos de Transformação (PTs) aéreos e em cabine, garantindo a continuidade do fornecimento de energia.",
+    features: [
+      "Postos de Transformação aéreos",
+      "Postos de Transformação em cabine",
+      "Montagem e instalação",
+      "Manutenção preventiva e corretiva",
+      "Ensaios e certificação",
+      "Remodelação de PTs existentes",
+    ],
+  },
+  {
+    id: "postos-carregamento",
+    icon: BatteryCharging,
+    title: "Postos de Carregamento",
+    description:
+      "Soluções chave-na-mão para carregamento de veículos elétricos (PVCE) em espaços públicos e privados, preparando o seu espaço para o futuro da mobilidade.",
+    features: [
+      "Postos de carregamento públicos",
+      "Postos de carregamento privados",
+      "Wallboxes domésticas",
       "Carregadores rápidos DC",
       "Gestão inteligente de energia",
       "Manutenção e assistência técnica",
-    ],
-  },
-  {
-    id: "iluminacao",
-    icon: PartyPopper,
-    title: "Iluminação Festiva",
-    description:
-      "Criamos ambientes mágicos e festivos com iluminação decorativa para eventos, festividades e espaços comerciais.",
-    features: [
-      "Decoração de Natal para cidades e vilas",
-      "Iluminação para eventos corporativos",
-      "Fachadas de edifícios e monumentos",
-      "Festas populares e romarias",
-      "Casamentos e celebrações",
-      "Projetos personalizados",
-    ],
-  },
-  {
-    id: "construcao",
-    icon: Hammer,
-    title: "Construção & Manutenção",
-    description:
-      "Realizamos obras de construção civil, remodelações e manutenção de edifícios com qualidade e profissionalismo.",
-    features: [
-      "Remodelações de interiores",
-      "Manutenção de edifícios",
-      "Obras de construção civil",
-      "Pinturas e acabamentos",
-      "Impermeabilizações",
-      "Pequenas reparações domésticas",
     ],
   },
 ];
