@@ -14,9 +14,13 @@
     --primary: 0 0% 10%;
     --primary-foreground: 0 0% 100%;
     
-    /* Orange CTA - #FF6A00 */
-    --accent: 25 100% 50%;
+    /* Dark Blue CTA - #3A445C */
+    --accent: 222 23% 29%;
     --accent-foreground: 0 0% 100%;
+    
+    /* Light Blue - #A7D0EB */
+    --accent-light: 204 58% 79%;
+    --accent-light-foreground: 222 23% 29%;
     
     /* Secondary gray - #333333 */
     --secondary: 0 0% 20%;
@@ -34,7 +38,7 @@
     
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 25 100% 50%;
+    --ring: 222 23% 29%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
@@ -42,8 +46,8 @@
     --radius: 0.5rem;
     
     /* Custom gradients */
-    --gradient-hero-overlay: linear-gradient(135deg, rgba(26, 26, 26, 0.85) 0%, rgba(26, 26, 26, 0.6) 100%);
-    --gradient-cta: linear-gradient(135deg, hsl(25, 100%, 50%) 0%, hsl(30, 100%, 45%) 100%);
+    --gradient-hero-overlay: linear-gradient(135deg, rgba(58, 68, 92, 0.9) 0%, rgba(58, 68, 92, 0.6) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(222, 23%, 29%) 0%, hsl(204, 58%, 79%) 100%);
     
     /* Shadows */
     --shadow-card: 0 4px 20px -4px rgba(0, 0, 0, 0.1);
