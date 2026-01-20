@@ -19,8 +19,9 @@ const ContactCTAButton = ({
   className,
   animated = false,
 }: ContactCTAButtonProps) => {
-  // Header button (animated) uses #345093, all others use #3A445C
+  // Header button (animated) uses #345093 and 16px radius, all others use #3A445C and 6px radius
   const buttonBackground = animated ? "#345093" : "#3A445C";
+  const buttonRadius = animated ? 16 : 6;
   
   const buttonContent = (
     <Link
@@ -32,7 +33,7 @@ const ContactCTAButton = ({
         alignItems: "center",
         justifyContent: "center",
         padding: "14px 28px",
-        borderRadius: 16,
+        borderRadius: buttonRadius,
         background: buttonBackground,
         color: "#fff",
         fontWeight: 600,
