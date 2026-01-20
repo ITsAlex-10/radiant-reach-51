@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -9,9 +10,11 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center font-body font-medium text-xl">
-                JF
-              </div>
+              <img 
+                src={logo} 
+                alt="Joaquim & Fernandes Logo" 
+                className="w-12 h-12 rounded-full object-cover"
+              />
               <div>
                 <h3 className="font-body font-medium">Joaquim & Fernandes</h3>
                 <p className="text-sm text-white/60">Lda</p>

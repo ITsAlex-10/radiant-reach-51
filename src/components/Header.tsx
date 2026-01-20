@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,15 +41,11 @@ const Header = () => {
       <div className="container-custom flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
-          <div
-            className={`w-12 h-12 rounded-full border-2 flex items-center justify-center font-body font-medium text-xl transition-all duration-300 ${
-              isScrolled
-                ? "border-primary text-primary"
-                : "border-white text-white"
-            }`}
-          >
-            JF
-          </div>
+          <img 
+            src={logo} 
+            alt="Joaquim & Fernandes Logo" 
+            className="w-12 h-12 rounded-full object-cover"
+          />
           <span
             className={`hidden sm:block font-body font-medium text-sm transition-colors duration-300 ${
               isScrolled ? "text-primary" : "text-white"
