@@ -42,7 +42,7 @@ const Hero = () => {
             duration: 0.6,
             delay: 0.4
           }} className="flex items-start gap-4 mb-8">
-              <div className="w-1 h-16 bg-accent flex-shrink-0" />
+              <div className="w-1 h-16 flex-shrink-0 bg-[#a8d0eb]" />
               <p className="text-lg md:text-xl text-white/90 leading-relaxed">
                 Impulsionamos o seu projeto com excelência técnica, rigor e
                 inovação. Há mais de duas décadas a transformar ideias em
