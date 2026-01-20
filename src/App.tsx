@@ -13,6 +13,7 @@ const Parceiros = lazy(() => import("./pages/Parceiros"));
 const Contacto = lazy(() => import("./pages/Contacto"));
 const Recrutamento = lazy(() => import("./pages/Recrutamento"));
 const SmartCities = lazy(() => import("./pages/SmartCities"));
+const SobreNos = lazy(() => import("./pages/SobreNos"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -33,6 +34,7 @@ const App = () => (
                 <Route path="/contacto" element={<Contacto />} />
                 <Route path="/recrutamento" element={<Recrutamento />} />
                 <Route path="/smart-cities" element={<SmartCities />} />
+                <Route path="/sobre-nos" element={<SobreNos />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
