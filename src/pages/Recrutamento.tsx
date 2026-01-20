@@ -59,9 +59,9 @@ const Recrutamento = () => {
 
       <Header />
 
-      <main className="pt-32 pb-20">
+      <main className="pb-20">
         {/* Hero Section */}
-        <section className="bg-primary text-white py-16">
+        <section className="bg-primary text-white pt-32 pb-16">
           <div className="container-custom text-center">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}

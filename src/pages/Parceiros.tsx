@@ -93,9 +93,9 @@ const Parceiros = () => {
 
       <Header />
       
-      <main className="pt-24">
+      <main>
         {/* Hero Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-primary/5 to-background">
+        <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-to-b from-primary/5 to-background">
           <div className="container-custom">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
