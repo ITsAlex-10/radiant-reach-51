@@ -41,7 +41,7 @@ const Benefits = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl text-primary mb-4">
             Porquê Escolher-nos?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -64,7 +64,7 @@ const Benefits = () => {
               <div className="w-20 h-20 mx-auto rounded-full bg-muted flex items-center justify-center mb-5 group-hover:bg-accent transition-colors duration-300">
                 <benefit.icon className="w-10 h-10 text-accent group-hover:text-white transition-colors duration-300" />
               </div>
-              <h3 className="text-lg font-bold text-primary mb-2">
+              <h3 className="text-lg text-primary mb-2 font-body font-medium">
                 {benefit.title}
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">

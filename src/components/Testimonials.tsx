@@ -50,7 +50,7 @@ const Testimonials = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl text-primary mb-4">
             O Que Dizem os Nossos Clientes
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -83,11 +83,11 @@ const Testimonials = () => {
                       ))}
                     </div>
                     <div className="w-16 h-16 rounded-full bg-accent/20 mx-auto mb-3 flex items-center justify-center">
-                      <span className="font-heading font-bold text-xl text-accent">
+                      <span className="font-body font-medium text-xl text-accent">
                         {testimonial.name.charAt(0)}
                       </span>
                     </div>
-                    <h4 className="font-heading font-bold text-primary">
+                    <h4 className="font-body font-medium text-primary">
                       {testimonial.name}
                     </h4>
                     <p className="text-sm text-muted-foreground">

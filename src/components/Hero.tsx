@@ -25,7 +25,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-6"
             >
               Soluções de Eletricidade, Construção e Mobilidade Elétrica,
             </motion.h1>

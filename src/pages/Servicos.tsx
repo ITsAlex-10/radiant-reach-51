@@ -83,7 +83,7 @@ const Servicos = () => {
               transition={{ duration: 0.6 }}
               className="text-center text-white"
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl mb-6">
                 Os Nossos Serviços
               </h1>
               <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
@@ -122,7 +122,7 @@ const Servicos = () => {
 
                 {/* Content */}
                 <div className={`${index % 2 === 1 ? "lg:order-1" : ""}`}>
-                  <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+                  <h2 className="text-3xl md:text-4xl text-primary mb-4">
                     {service.title}
                   </h2>
                   <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
