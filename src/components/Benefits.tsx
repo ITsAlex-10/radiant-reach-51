@@ -13,7 +13,7 @@ const benefits = [
 
 const Benefits = () => {
   return (
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-[#F5F5F5]">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image */}
