@@ -4,6 +4,9 @@
   border-radius: inherit;
   overflow: visible;
   isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .eb-canvas-container {
