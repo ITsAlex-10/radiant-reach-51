@@ -17,7 +17,7 @@ const Partners = () => {
 
   return (
     <section id="parcerias" className="py-12 bg-muted overflow-hidden">
-      <div className="container-custom mb-6">
+      <div className="container-custom mb-10">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
