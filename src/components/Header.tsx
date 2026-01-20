@@ -22,6 +22,9 @@ const Header = () => {
     name: "Serviços",
     href: "/servicos"
   }, {
+    name: "Smart Cities",
+    href: "/smart-cities"
+  }, {
     name: "Parceiros",
     href: "/parceiros"
   }, {
