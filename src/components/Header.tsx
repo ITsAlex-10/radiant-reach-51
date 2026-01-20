@@ -46,7 +46,7 @@ const Header = () => {
                 {link.name}
               </Link>)}
           </nav>
-          <ContactCTAButton href="/contacto">
+          <ContactCTAButton href="/contacto" animated>
             Peça um Orçamento
           </ContactCTAButton>
         </div>
@@ -77,6 +77,7 @@ const Header = () => {
                 href="/contacto" 
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="w-full mt-4"
+                animated
               >
                 Peça um Orçamento
               </ContactCTAButton>
