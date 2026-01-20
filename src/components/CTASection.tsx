@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import { Phone } from "lucide-react";
+import ContactCTAButton from "./ContactCTAButton";
 
 const CTASection = () => {
   return (
@@ -28,11 +28,9 @@ const CTASection = () => {
             equipa está pronta para ajudar no seu projeto.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contacto">
-              <Button variant="cta" size="xl" className="w-full sm:w-auto">
-                Peça Avaliação Gratuita
-              </Button>
-            </Link>
+            <ContactCTAButton href="/contacto" className="w-full sm:w-auto">
+              Peça Avaliação Gratuita
+            </ContactCTAButton>
             <a href="tel:+351123456789">
               <Button
                 variant="heroOutline"

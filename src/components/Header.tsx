@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/logo.png";
+import ContactCTAButton from "./ContactCTAButton";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -46,11 +46,9 @@ const Header = () => {
                 {link.name}
               </Link>)}
           </nav>
-          <Link to="/contacto">
-            <Button variant="cta" size="lg">
-              Peça um Orçamento
-            </Button>
-          </Link>
+          <ContactCTAButton href="/contacto">
+            Peça um Orçamento
+          </ContactCTAButton>
         </div>
 
         {/* Mobile Menu Button */}
@@ -75,11 +73,13 @@ const Header = () => {
               {navLinks.map(link => <Link key={link.name} to={link.href} className={`font-body font-medium text-base py-2 transition-colors hover:text-accent ${isActive(link.href) ? "text-accent" : "text-primary"}`} onClick={() => setIsMobileMenuOpen(false)}>
                   {link.name}
                 </Link>)}
-              <Link to="/contacto" onClick={() => setIsMobileMenuOpen(false)}>
-                <Button variant="cta" size="lg" className="w-full mt-4">
-                  Peça um Orçamento
-                </Button>
-              </Link>
+              <ContactCTAButton 
+                href="/contacto" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="w-full mt-4"
+              >
+                Peça um Orçamento
+              </ContactCTAButton>
             </nav>
           </motion.div>}
       </AnimatePresence>

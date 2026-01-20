@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
+import ContactCTAButton from "@/components/ContactCTAButton";
 import { FileText, Activity, Wrench, Zap, BatteryCharging, CheckCircle } from "lucide-react";
 
 const services = [
@@ -153,11 +152,9 @@ const Servicos = () => {
                     ))}
                   </ul>
 
-                  <Link to="/contacto">
-                    <Button variant="cta" size="lg">
-                      Pedir Orçamento
-                    </Button>
-                  </Link>
+                  <ContactCTAButton href="/contacto">
+                    Pedir Orçamento
+                  </ContactCTAButton>
                 </div>
               </motion.div>
             </div>
