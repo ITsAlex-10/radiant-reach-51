@@ -144,9 +144,9 @@ const Footer = () => {
             direitos reservados.
           </p>
           <div className="flex gap-6 text-sm">
-            <a href="#" className="text-white/60 hover:text-[#A7D1EC] transition-colors">
-              Política de Privacidade
-            </a>
+            <Link to="/politica-qualidade" className="text-white/60 hover:text-[#A7D1EC] transition-colors">
+              Política de Qualidade
+            </Link>
             <a href="#" className="text-white/60 hover:text-[#A7D1EC] transition-colors">
               Termos de Serviço
             </a>
