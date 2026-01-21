@@ -194,8 +194,8 @@ const Recrutamento = () => {
             <p className="font-body text-white/80 max-w-xl mx-auto mb-8">
               Envie-nos uma candidatura espontânea. Estamos sempre interessados em conhecer novos talentos.
             </p>
-            <Button onClick={() => handleApply("Candidatura Espontânea")} size="lg" className="bg-[#A7D1EC] text-primary hover:bg-[#A7D1EC]/90">
-              <Mail size={18} className="mr-2" />
+            <Button onClick={() => handleApply("Candidatura Espontânea")} size="lg" className="bg-[#A7D1EC] text-primary hover:bg-[#A7D1EC]/90 max-w-full whitespace-normal text-center">
+              <Mail size={18} className="mr-2 flex-shrink-0" />
               Enviar Candidatura Espontânea
             </Button>
           </div>
