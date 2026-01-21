@@ -51,7 +51,7 @@ const Header = () => {
         {/* Desktop Navigation + CTA - aligned right */}
         <div className="hidden lg:flex items-center gap-6 ml-auto">
           <nav className="flex items-center gap-6">
-            {navLinks.map(link => <Link key={link.name} to={link.href} className={`font-body font-medium text-sm uppercase tracking-wider transition-colors duration-300 hover:text-accent ${isScrolled ? "text-primary" : "text-white"} ${isActive(link.href) ? "text-accent" : ""}`}>
+            {navLinks.map(link => <Link key={link.name} to={link.href} className={`font-body font-medium text-sm uppercase tracking-wider transition-colors duration-300 hover:text-accent-light ${isScrolled ? "text-primary" : "text-white"} ${isActive(link.href) ? "text-accent-light" : ""}`}>
                 {link.name}
               </Link>)}
           </nav>
