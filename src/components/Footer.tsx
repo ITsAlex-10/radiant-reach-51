@@ -20,10 +20,10 @@ const Footer = () => {
               mobilidade elétrica e construção com qualidade e profissionalismo.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-[#A7D1EC]/20 flex items-center justify-center hover:bg-[#A7D1EC] hover:text-primary transition-all duration-300" aria-label="Facebook">
+              <a href="https://www.facebook.com/JoaquimFernandes86?locale=pt_PT" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#A7D1EC]/20 flex items-center justify-center hover:bg-[#A7D1EC] hover:text-primary transition-all duration-300" aria-label="Facebook">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-[#A7D1EC]/20 flex items-center justify-center hover:bg-[#A7D1EC] hover:text-primary transition-all duration-300" aria-label="Instagram">
+              <a href="https://www.instagram.com/joaquim_fernandes86/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#A7D1EC]/20 flex items-center justify-center hover:bg-[#A7D1EC] hover:text-primary transition-all duration-300" aria-label="Instagram">
                 <Instagram className="w-5 h-5" />
               </a>
               <a href="#" className="w-10 h-10 rounded-full bg-[#A7D1EC]/20 flex items-center justify-center hover:bg-[#A7D1EC] hover:text-primary transition-all duration-300" aria-label="LinkedIn">
