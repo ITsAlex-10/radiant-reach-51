@@ -63,16 +63,7 @@ const Recrutamento = () => {
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#A7D1EC]/15 rounded-full blur-3xl" />
           
           <div className="container-custom text-center relative z-10">
-            <motion.div initial={{
-            opacity: 0,
-            y: 20
-          }} animate={{
-            opacity: 1,
-            y: 0
-          }} className="inline-flex items-center gap-2 bg-[#A7D1EC]/20 px-4 py-2 rounded-full mb-6">
-              <Users className="w-4 h-4 text-[#A7D1EC]" />
-              <span className="font-body text-sm">Junte-se à Nossa Equipa</span>
-            </motion.div>
+            
             <motion.h1 initial={{
             opacity: 0,
             y: 20
