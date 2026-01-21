@@ -111,10 +111,7 @@ const Contacto = () => {
           }} transition={{
             duration: 0.6
           }} className="text-center text-white">
-              <div className="inline-flex items-center gap-2 bg-[#A7D1EC]/20 px-4 py-2 rounded-full mb-6">
-                <Zap className="w-4 h-4 text-[#A7D1EC]" />
-                <span className="font-body text-sm">Fale Connosco</span>
-              </div>
+              
               <h1 className="text-4xl md:text-5xl lg:text-6xl mb-6">
                 Contacte-nos
               </h1>
