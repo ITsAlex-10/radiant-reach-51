@@ -10,23 +10,38 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, Zap } from "lucide-react";
 import { toast } from "sonner";
-
-const SUBJECTS = [
-  { value: "orcamento", label: "Pedido de Orçamento" },
-  { value: "informacoes", label: "Informações Gerais" },
-  { value: "recrutamento", label: "Recrutamento" },
-  { value: "outros", label: "Outros" },
-];
-
-const SERVICES = [
-  { id: "projetos", label: "Projetos de Eletricidade" },
-  { id: "plr", label: "PLR's (Pedidos de Ligação à Rede)" },
-  { id: "instalacoes", label: "Instalações Elétricas" },
-  { id: "postos-transformacao", label: "Postos de Transformação" },
-  { id: "postos-carregamento", label: "Postos de Carregamento" },
-  { id: "smart-cities", label: "Smart Cities" },
-];
-
+const SUBJECTS = [{
+  value: "orcamento",
+  label: "Pedido de Orçamento"
+}, {
+  value: "informacoes",
+  label: "Informações Gerais"
+}, {
+  value: "recrutamento",
+  label: "Recrutamento"
+}, {
+  value: "outros",
+  label: "Outros"
+}];
+const SERVICES = [{
+  id: "projetos",
+  label: "Projetos de Eletricidade"
+}, {
+  id: "plr",
+  label: "PLR's (Pedidos de Ligação à Rede)"
+}, {
+  id: "instalacoes",
+  label: "Instalações Elétricas"
+}, {
+  id: "postos-transformacao",
+  label: "Postos de Transformação"
+}, {
+  id: "postos-carregamento",
+  label: "Postos de Carregamento"
+}, {
+  id: "smart-cities",
+  label: "Smart Cities"
+}];
 const Contacto = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -37,14 +52,12 @@ const Contacto = () => {
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
   const handleSubjectChange = (value: string) => {
     setFormData({
       ...formData,
@@ -52,16 +65,12 @@ const Contacto = () => {
       selectedServices: value !== "orcamento" ? [] : formData.selectedServices
     });
   };
-
   const handleServiceToggle = (serviceId: string) => {
     setFormData(prev => ({
       ...prev,
-      selectedServices: prev.selectedServices.includes(serviceId)
-        ? prev.selectedServices.filter(id => id !== serviceId)
-        : [...prev.selectedServices, serviceId]
+      selectedServices: prev.selectedServices.includes(serviceId) ? prev.selectedServices.filter(id => id !== serviceId) : [...prev.selectedServices, serviceId]
     }));
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -136,9 +145,7 @@ const Contacto = () => {
             }} transition={{
               duration: 0.6
             }}>
-                <span className="inline-block bg-[#A7D1EC]/20 text-primary font-body text-sm px-4 py-2 rounded-full mb-4">
-                  Formulário de Contacto
-                </span>
+                
                 <h2 className="text-3xl text-primary mb-6">
                   Peça um Orçamento
                 </h2>
@@ -171,45 +178,36 @@ const Contacto = () => {
                         <SelectValue placeholder="Selecione um assunto" />
                       </SelectTrigger>
                       <SelectContent className="bg-background border border-[#A7D1EC]/30">
-                        {SUBJECTS.map((subject) => (
-                          <SelectItem key={subject.value} value={subject.value}>
+                        {SUBJECTS.map(subject => <SelectItem key={subject.value} value={subject.value}>
                             {subject.label}
-                          </SelectItem>
-                        ))}
+                          </SelectItem>)}
                       </SelectContent>
                     </Select>
                   </div>
 
                   <AnimatePresence>
-                    {formData.subject === "orcamento" && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="space-y-3 overflow-hidden"
-                      >
+                    {formData.subject === "orcamento" && <motion.div initial={{
+                    opacity: 0,
+                    height: 0
+                  }} animate={{
+                    opacity: 1,
+                    height: "auto"
+                  }} exit={{
+                    opacity: 0,
+                    height: 0
+                  }} transition={{
+                    duration: 0.3
+                  }} className="space-y-3 overflow-hidden">
                         <Label>Serviços Pretendidos *</Label>
                         <div className="grid sm:grid-cols-2 gap-3 p-4 bg-[#A7D1EC]/5 rounded-xl border border-[#A7D1EC]/20">
-                          {SERVICES.map((service) => (
-                            <div key={service.id} className="flex items-center space-x-3">
-                              <Checkbox
-                                id={service.id}
-                                checked={formData.selectedServices.includes(service.id)}
-                                onCheckedChange={() => handleServiceToggle(service.id)}
-                                className="border-[#A7D1EC]/50 data-[state=checked]:bg-primary data-[state=checked]:border-primary"
-                              />
-                              <Label
-                                htmlFor={service.id}
-                                className="text-sm font-normal cursor-pointer"
-                              >
+                          {SERVICES.map(service => <div key={service.id} className="flex items-center space-x-3">
+                              <Checkbox id={service.id} checked={formData.selectedServices.includes(service.id)} onCheckedChange={() => handleServiceToggle(service.id)} className="border-[#A7D1EC]/50 data-[state=checked]:bg-primary data-[state=checked]:border-primary" />
+                              <Label htmlFor={service.id} className="text-sm font-normal cursor-pointer">
                                 {service.label}
                               </Label>
-                            </div>
-                          ))}
+                            </div>)}
                         </div>
-                      </motion.div>
-                    )}
+                      </motion.div>}
                   </AnimatePresence>
 
                   <div className="space-y-2">
@@ -238,9 +236,7 @@ const Contacto = () => {
             }} transition={{
               duration: 0.6
             }}>
-                <span className="inline-block bg-[#A7D1EC]/20 text-primary font-body text-sm px-4 py-2 rounded-full mb-4">
-                  Informações
-                </span>
+                
                 <h2 className="text-3xl text-primary mb-6">
                   Informações de Contacto
                 </h2>
