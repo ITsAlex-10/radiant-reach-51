@@ -143,13 +143,16 @@ const Footer = () => {
             © {new Date().getFullYear()} Joaquim & Fernandes Lda. Todos os
             direitos reservados.
           </p>
-          <div className="flex gap-6 text-sm">
+          <div className="flex flex-wrap justify-center md:justify-end gap-6 text-sm">
             <Link to="/politica-qualidade" className="text-white/60 hover:text-[#A7D1EC] transition-colors">
               Política de Qualidade
             </Link>
-            <a href="#" className="text-white/60 hover:text-[#A7D1EC] transition-colors">
-              Termos de Serviço
-            </a>
+            <Link to="/politica-privacidade" className="text-white/60 hover:text-[#A7D1EC] transition-colors">
+              Política de Privacidade
+            </Link>
+            <Link to="/termos-utilizacao" className="text-white/60 hover:text-[#A7D1EC] transition-colors">
+              Termos de Utilização
+            </Link>
           </div>
         </div>
       </div>
