@@ -44,9 +44,7 @@ const Partners = () => {
       }} transition={{
         duration: 0.5
       }} className="text-center">
-          <span className="inline-block bg-[#A7D1EC]/20 text-primary font-body text-sm px-4 py-2 rounded-full mb-4">
-            Trabalhamos com os Melhores
-          </span>
+          
           <h2 className="text-2xl md:text-3xl text-primary">
             Parceiros de Confiança
           </h2>
