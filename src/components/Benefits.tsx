@@ -75,9 +75,7 @@ const Benefits = () => {
           duration: 0.6,
           delay: 0.2
         }}>
-            <span className="inline-block bg-[#A7D1EC]/20 text-primary font-body text-sm px-4 py-2 rounded-full mb-4">
-              Porquê Escolher-nos
-            </span>
+            
             <h2 className="text-3xl md:text-4xl lg:text-5xl text-primary mb-6">
               Porquê escolher a Joaquim & Fernandes?
             </h2>
