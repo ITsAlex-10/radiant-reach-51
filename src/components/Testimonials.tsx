@@ -1,107 +1,107 @@
 import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
-import { useState, useEffect } from "react";
-const testimonials = [{
-  name: "António Silva",
-  role: "Proprietário Residencial",
-  text: "Excelente trabalho na instalação elétrica da minha casa. Profissionais competentes e muito atenciosos.",
-  rating: 5,
-  image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
-}, {
-  name: "Maria Santos",
-  role: "Gestora de Condomínio",
-  text: "A Joaquim & Fernandes realizou toda a manutenção elétrica do nosso condomínio com grande profissionalismo.",
-  rating: 5,
-  image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop"
-}, {
-  name: "Carlos Ferreira",
-  role: "Empresário",
-  text: "Instalaram os postos de carregamento na minha empresa. Serviço impecável e dentro do prazo.",
-  rating: 5,
-  image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
-}, {
-  name: "Ana Rodrigues",
-  role: "Arquiteta",
-  text: "Trabalho frequentemente com a equipa JF. São sempre a minha primeira escolha para projetos exigentes.",
-  rating: 5,
-  image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop"
-}];
-const Testimonials = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex(prev => (prev + 1) % testimonials.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
-  return <section className="section-padding bg-gradient-to-b from-white to-[#A7D1EC]/10 relative overflow-hidden">
-      {/* Decorative Elements */}
-      <div className="absolute top-10 left-10 w-64 h-64 bg-[#A7D1EC]/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-10 right-10 w-48 h-48 bg-[#A7D1EC]/15 rounded-full blur-2xl" />
+import { Star } from "lucide-react";
 
-      <div className="container-custom relative z-10">
+const testimonials = [
+  {
+    name: "Carlos Mendes",
+    role: "DIRETOR DE OPERAÇÕES",
+    company: "LOGÍSTICA SA",
+    text: "A instalação dos carregadores elétricos na nossa frota foi impecável. Profissionalismo e rapidez.",
+    rating: 5,
+  },
+  {
+    name: "Ana Pereira",
+    role: "PROPRIETÁRIA",
+    company: "RESTAURANTE O SOLAR",
+    text: "A renovação elétrica e a iluminação festiva transformaram o nosso espaço. Recomendo vivamente.",
+    rating: 5,
+  },
+  {
+    name: "Miguel Santos",
+    role: "GESTOR DE CONDOMÍNIO",
+    company: "GESTCONDO",
+    text: "Manutenção de edifícios exemplar. Resolvemos problemas antigos de infiltração e eletricidade.",
+    rating: 5,
+  },
+];
+
+const Testimonials = () => {
+  return (
+    <section className="section-padding bg-white">
+      <div className="container-custom">
         {/* Section Header */}
-        <motion.div initial={{
-        opacity: 0,
-        y: 30
-      }} whileInView={{
-        opacity: 1,
-        y: 0
-      }} viewport={{
-        once: true
-      }} transition={{
-        duration: 0.6
-      }} className="text-center mb-16">
-          
-          <h2 className="text-3xl md:text-4xl lg:text-5xl text-primary mb-4">
-            O Que Dizem os Nossos Clientes
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl md:text-4xl lg:text-5xl text-primary mb-4 italic">
+            O que dizem os nossos clientes
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A satisfação dos nossos clientes é a nossa maior prioridade e o
-            melhor indicador da qualidade do nosso trabalho.
-          </p>
+          <div className="w-12 h-1 bg-[#A7D1EC] mx-auto" />
         </motion.div>
 
-        {/* Testimonials Slider */}
-        <div className="relative max-w-4xl mx-auto">
-          <div className="overflow-hidden">
-            <motion.div className="flex" animate={{
-            x: -currentIndex * 100 + "%"
-          }} transition={{
-            type: "spring",
-            stiffness: 300,
-            damping: 30
-          }}>
-              {testimonials.map((testimonial, index) => <div key={index} className="w-full flex-shrink-0 px-4">
-                  <div className="bg-white rounded-2xl p-8 md:p-12 text-center shadow-lg border border-[#A7D1EC]/20">
-                    <Quote className="w-12 h-12 text-[#A7D1EC] mx-auto mb-6" />
-                    <p className="text-lg md:text-xl text-primary mb-6 leading-relaxed italic">
-                      "{testimonial.text}"
-                    </p>
-                    <div className="flex justify-center gap-1 mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="w-5 h-5 text-[#A7D1EC] fill-[#A7D1EC]" />)}
-                    </div>
-                    <img src={testimonial.image} alt={testimonial.name} className="w-16 h-16 rounded-full mx-auto mb-3 border-4 border-[#A7D1EC]/30 object-cover" />
-                    <h4 className="font-body font-medium text-primary">
-                      {testimonial.name}
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      {testimonial.role}
-                    </p>
-                  </div>
-                </div>)}
+        {/* Testimonials Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {testimonials.map((testimonial, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm relative"
+            >
+              {/* Stars */}
+              <div className="flex gap-0.5 mb-4">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className="w-4 h-4 text-primary fill-primary"
+                  />
+                ))}
+              </div>
+
+              {/* Quote Icon */}
+              <div className="absolute top-6 right-6">
+                <svg
+                  width="32"
+                  height="24"
+                  viewBox="0 0 32 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="text-[#A7D1EC]"
+                >
+                  <path
+                    d="M0 24V14.4C0 11.7333 0.4 9.33333 1.2 7.2C2.06667 5.06667 3.26667 3.26667 4.8 1.8C6.33333 0.333333 8.13333 -0.666667 10.2 -1.2L11.4 2.4C9.53333 3.06667 8 4.2 6.8 5.8C5.66667 7.33333 5.06667 9.13333 5 11.2H10V24H0ZM18 24V14.4C18 11.7333 18.4 9.33333 19.2 7.2C20.0667 5.06667 21.2667 3.26667 22.8 1.8C24.3333 0.333333 26.1333 -0.666667 28.2 -1.2L29.4 2.4C27.5333 3.06667 26 4.2 24.8 5.8C23.6667 7.33333 23.0667 9.13333 23 11.2H28V24H18Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+
+              {/* Testimonial Text */}
+              <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                "{testimonial.text}"
+              </p>
+
+              {/* Author */}
+              <div>
+                <h4 className="font-body font-semibold text-primary text-base">
+                  {testimonial.name}
+                </h4>
+                <p className="text-xs text-muted-foreground">
+                  {testimonial.role},{" "}
+                  <span className="text-[#A7D1EC]">{testimonial.company}</span>
+                </p>
+              </div>
             </motion.div>
-          </div>
-
-          {/* Dots */}
-          <div className="flex justify-center gap-2 mt-8">
-            {testimonials.map((_, index) => <button key={index} onClick={() => setCurrentIndex(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex ? "bg-[#A7D1EC] w-8" : "bg-primary/20"}`} aria-label={`Go to testimonial ${index + 1}`} />)}
-          </div>
+          ))}
         </div>
-
-        {/* Client Logos/Images */}
-        
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Testimonials;
