@@ -78,9 +78,7 @@ const SobreNos = () => {
           }} transition={{
             duration: 0.6
           }} className="text-center max-w-3xl mx-auto">
-              <div className="inline-block bg-[#A7D1EC]/30 px-4 py-2 rounded-full mb-6">
-                <span className="font-body text-sm text-white/90">Desde 1995</span>
-              </div>
+              
               <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl mb-6">
                 Sobre Nós
               </h1>
