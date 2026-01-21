@@ -137,7 +137,7 @@ const Recrutamento = () => {
                     <CardHeader>
                       <div className="flex items-start justify-between gap-4">
                         <div>
-                          <CardTitle className="text-xl text-primary mb-2">
+                          <CardTitle className="text-xl text-primary mb-2 font-normal">
                             {job.title}
                           </CardTitle>
                           <div className="flex flex-wrap gap-3 text-sm text-muted-foreground">
