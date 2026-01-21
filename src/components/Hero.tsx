@@ -92,14 +92,7 @@ const Hero = () => {
     }} transition={{
       delay: 1.2
     }} className="absolute bottom-8 left-1/2 -translate-x-1/2">
-        <div className="w-6 h-10 rounded-full border-2 border-[#A7D1EC]/50 flex justify-center pt-2">
-          <motion.div animate={{
-          y: [0, 8, 0]
-        }} transition={{
-          repeat: Infinity,
-          duration: 1.5
-        }} className="w-1.5 h-1.5 bg-[#A7D1EC] rounded-full" />
-        </div>
+        
       </motion.div>
     </section>;
 };
