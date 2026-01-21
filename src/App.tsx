@@ -16,6 +16,8 @@ const SmartCities = lazy(() => import("./pages/SmartCities"));
 const SobreNos = lazy(() => import("./pages/SobreNos"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const PoliticaQualidade = lazy(() => import("./pages/PoliticaQualidade"));
+const TermosUtilizacao = lazy(() => import("./pages/TermosUtilizacao"));
+const PoliticaPrivacidade = lazy(() => import("./pages/PoliticaPrivacidade"));
 
 const queryClient = new QueryClient();
 
@@ -37,6 +39,8 @@ const App = () => (
                 <Route path="/smart-cities" element={<SmartCities />} />
                 <Route path="/sobre-nos" element={<SobreNos />} />
                 <Route path="/politica-qualidade" element={<PoliticaQualidade />} />
+                <Route path="/termos-utilizacao" element={<TermosUtilizacao />} />
+                <Route path="/politica-privacidade" element={<PoliticaPrivacidade />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
