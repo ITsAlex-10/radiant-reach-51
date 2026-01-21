@@ -1,27 +1,67 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, Zap } from "lucide-react";
 import { toast } from "sonner";
+
+const SUBJECTS = [
+  { value: "orcamento", label: "Pedido de Orçamento" },
+  { value: "informacoes", label: "Informações Gerais" },
+  { value: "recrutamento", label: "Recrutamento" },
+  { value: "outros", label: "Outros" },
+];
+
+const SERVICES = [
+  { id: "projetos", label: "Projetos de Eletricidade" },
+  { id: "plr", label: "PLR's (Pedidos de Ligação à Rede)" },
+  { id: "instalacoes", label: "Instalações Elétricas" },
+  { id: "postos-transformacao", label: "Postos de Transformação" },
+  { id: "postos-carregamento", label: "Postos de Carregamento" },
+  { id: "smart-cities", label: "Smart Cities" },
+];
+
 const Contacto = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
+    subject: "",
+    selectedServices: [] as string[],
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
+
+  const handleSubjectChange = (value: string) => {
+    setFormData({
+      ...formData,
+      subject: value,
+      selectedServices: value !== "orcamento" ? [] : formData.selectedServices
+    });
+  };
+
+  const handleServiceToggle = (serviceId: string) => {
+    setFormData(prev => ({
+      ...prev,
+      selectedServices: prev.selectedServices.includes(serviceId)
+        ? prev.selectedServices.filter(id => id !== serviceId)
+        : [...prev.selectedServices, serviceId]
+    }));
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -35,6 +75,8 @@ const Contacto = () => {
       name: "",
       email: "",
       phone: "",
+      subject: "",
+      selectedServices: [],
       message: ""
     });
     setIsSubmitting(false);
@@ -121,6 +163,54 @@ const Contacto = () => {
                     <Label htmlFor="phone">Telefone</Label>
                     <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="+351 912 345 678" className="h-12 border-[#A7D1EC]/30 focus:border-[#A7D1EC]" />
                   </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="subject">Assunto *</Label>
+                    <Select value={formData.subject} onValueChange={handleSubjectChange}>
+                      <SelectTrigger className="h-12 border-[#A7D1EC]/30 focus:border-[#A7D1EC] bg-background">
+                        <SelectValue placeholder="Selecione um assunto" />
+                      </SelectTrigger>
+                      <SelectContent className="bg-background border border-[#A7D1EC]/30">
+                        {SUBJECTS.map((subject) => (
+                          <SelectItem key={subject.value} value={subject.value}>
+                            {subject.label}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  <AnimatePresence>
+                    {formData.subject === "orcamento" && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="space-y-3 overflow-hidden"
+                      >
+                        <Label>Serviços Pretendidos *</Label>
+                        <div className="grid sm:grid-cols-2 gap-3 p-4 bg-[#A7D1EC]/5 rounded-xl border border-[#A7D1EC]/20">
+                          {SERVICES.map((service) => (
+                            <div key={service.id} className="flex items-center space-x-3">
+                              <Checkbox
+                                id={service.id}
+                                checked={formData.selectedServices.includes(service.id)}
+                                onCheckedChange={() => handleServiceToggle(service.id)}
+                                className="border-[#A7D1EC]/50 data-[state=checked]:bg-primary data-[state=checked]:border-primary"
+                              />
+                              <Label
+                                htmlFor={service.id}
+                                className="text-sm font-normal cursor-pointer"
+                              >
+                                {service.label}
+                              </Label>
+                            </div>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
 
                   <div className="space-y-2">
                     <Label htmlFor="message">Mensagem *</Label>
