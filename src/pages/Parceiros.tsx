@@ -204,9 +204,7 @@ const Parceiros = () => {
           }} transition={{
             duration: 0.5
           }} className="text-center mb-12">
-              <span className="inline-block bg-[#A7D1EC]/20 text-primary font-body text-sm px-4 py-2 rounded-full mb-4">
-                Certificações
-              </span>
+              
               <h2 id="parcerias-title" className="text-3xl md:text-4xl text-primary mb-4">
                 Parcerias Ativas
               </h2>
