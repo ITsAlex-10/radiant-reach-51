@@ -73,7 +73,7 @@ const Recrutamento = () => {
             y: 0
           }} transition={{
             delay: 0.1
-          }} className="font-heading text-4xl md:text-5xl lg:text-6xl mb-6">
+          }} className="font-heading font-normal text-4xl md:text-5xl lg:text-6xl mb-6">
               Trabalhe Connosco
             </motion.h1>
             <motion.p initial={{
@@ -106,7 +106,7 @@ const Recrutamento = () => {
           <div className="container-custom">
             <div className="text-center mb-12">
               
-              <h2 className="font-heading text-3xl md:text-4xl text-primary mb-4">
+              <h2 className="font-heading font-normal text-3xl md:text-4xl text-primary mb-4">
                 Vagas Disponíveis
               </h2>
               <p className="font-body text-muted-foreground max-w-xl mx-auto">
@@ -168,7 +168,7 @@ const Recrutamento = () => {
                       </div>
                     </CardContent>
                     <CardFooter>
-                      <Button onClick={() => handleApply(job.title)} className="w-full bg-primary hover:bg-primary/90">
+                      <Button onClick={() => handleApply(job.title)} className="w-full bg-[#3A445C] hover:bg-[#3A445C]/90">
                         <Mail size={18} className="mr-2" />
                         Enviar Currículo
                       </Button>
@@ -188,7 +188,7 @@ const Recrutamento = () => {
             <div className="inline-block bg-[#A7D1EC]/20 px-4 py-2 rounded-full mb-6">
               <span className="text-white font-body text-sm">Candidatura Espontânea</span>
             </div>
-            <h2 className="font-heading text-3xl text-white mb-4">
+            <h2 className="font-heading font-normal text-3xl text-white mb-4">
               Não encontrou a vaga ideal?
             </h2>
             <p className="font-body text-white/80 max-w-xl mx-auto mb-8">
