@@ -99,7 +99,7 @@ const SmartCities = () => {
                 Cidades mais eficientes, sustentáveis e conectadas. 
                 Implementamos soluções tecnológicas que transformam a forma como vivemos e interagimos com o espaço urbano.
               </p>
-              <div className="w-24 h-1 bg-[#A7D1EC] mx-auto rounded-full" />
+              
             </motion.div>
           </div>
         </section>
