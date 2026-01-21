@@ -33,7 +33,7 @@ const ContactCTAButton = ({
         display: "inline-flex",
         alignItems: "center",
         justifyContent: "center",
-        padding: "14px 28px",
+        padding: "14px 48px",
         borderRadius: buttonRadius,
         background: buttonBackground,
         color: "#fff",
