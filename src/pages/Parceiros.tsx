@@ -27,14 +27,14 @@ const featuredPartner = {
 
 // Suppliers
 const fornecedores = [
-  { name: "EDP", category: "Energia" },
-  { name: "Schneider Electric", category: "Equipamentos Elétricos" },
-  { name: "ABB", category: "Automação e Energia" },
-  { name: "Legrand", category: "Infraestrutura Elétrica" },
-  { name: "Hager", category: "Quadros e Proteção" },
-  { name: "Siemens", category: "Tecnologia Industrial" },
-  { name: "Weidmüller", category: "Conectividade Industrial" },
-  { name: "Phoenix Contact", category: "Componentes Eletrónicos" },
+  { name: "EDP", category: "Energia", image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400&h=300&fit=crop" },
+  { name: "Schneider Electric", category: "Equipamentos Elétricos", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" },
+  { name: "ABB", category: "Automação e Energia", image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=300&fit=crop" },
+  { name: "Legrand", category: "Infraestrutura Elétrica", image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400&h=300&fit=crop" },
+  { name: "Hager", category: "Quadros e Proteção", image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&h=300&fit=crop" },
+  { name: "Siemens", category: "Tecnologia Industrial", image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=400&h=300&fit=crop" },
+  { name: "Weidmüller", category: "Conectividade Industrial", image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=300&fit=crop" },
+  { name: "Phoenix Contact", category: "Componentes Eletrónicos", image: "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=400&h=300&fit=crop" },
 ];
 
 // Closed partnerships
@@ -95,36 +95,50 @@ const Parceiros = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-to-b from-primary/5 to-background">
-          <div className="container-custom">
+        <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-primary relative overflow-hidden">
+          <div 
+            className="absolute inset-0 bg-cover bg-center opacity-15"
+            style={{
+              backgroundImage: "url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&h=600&fit=crop')"
+            }}
+          />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#A7D1EC]/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#A7D1EC]/15 rounded-full blur-3xl" />
+          
+          <div className="container-custom relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-center max-w-3xl mx-auto"
+              className="text-center max-w-3xl mx-auto text-white"
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl text-primary mb-6">
+              <div className="inline-flex items-center gap-2 bg-[#A7D1EC]/20 px-4 py-2 rounded-full mb-6">
+                <Award className="w-4 h-4 text-[#A7D1EC]" />
+                <span className="font-body text-sm">Parceiros Certificados</span>
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl mb-6">
                 Parceiros e Fornecedores
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground">
+              <p className="text-lg md:text-xl text-white/80 mb-6">
                 Trabalhamos com os melhores parceiros e fornecedores do setor elétrico para garantir 
                 qualidade e certificação em todos os nossos projetos.
               </p>
+              <div className="w-24 h-1 bg-[#A7D1EC] mx-auto rounded-full" />
             </motion.div>
           </div>
         </section>
 
         {/* Featured Partner - E-Redes */}
-        <section className="py-16 md:py-20 bg-primary/5" aria-labelledby="eredes-partner">
+        <section className="py-16 md:py-20 bg-gradient-to-b from-[#A7D1EC]/10 to-background" aria-labelledby="eredes-partner">
           <div className="container-custom">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-background rounded-2xl shadow-xl overflow-hidden border-2 border-primary/20"
+              className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-[#A7D1EC]/30"
             >
-              <div className="bg-primary text-white py-4 px-6 flex items-center gap-3">
+              <div className="bg-[#A7D1EC] text-primary py-4 px-6 flex items-center gap-3">
                 <Award className="w-6 h-6" />
                 <span className="font-body font-semibold uppercase tracking-wide text-sm">
                   Parceiro em Destaque
@@ -145,7 +159,7 @@ const Parceiros = () => {
                       {featuredPartner.keywords.map((keyword) => (
                         <span 
                           key={keyword}
-                          className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full font-body"
+                          className="px-3 py-1 bg-[#A7D1EC]/20 text-primary text-sm rounded-full font-body"
                         >
                           {keyword}
                         </span>
@@ -156,7 +170,7 @@ const Parceiros = () => {
                       href="https://www.e-redes.pt" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-body font-medium"
+                      className="inline-flex items-center gap-2 text-primary hover:text-[#A7D1EC] transition-colors font-body font-medium"
                     >
                       Visitar E-Redes <ExternalLink className="w-4 h-4" />
                     </a>
@@ -164,13 +178,15 @@ const Parceiros = () => {
                   
                   <div>
                     <h3 className="text-xl text-primary mb-4 flex items-center gap-2">
-                      <ShieldCheck className="w-5 h-5" />
+                      <ShieldCheck className="w-5 h-5 text-[#A7D1EC]" />
                       Serviços Certificados E-Redes
                     </h3>
                     <ul className="space-y-3">
                       {featuredPartner.services.map((service) => (
                         <li key={service} className="flex items-start gap-3">
-                          <Zap className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                          <div className="w-6 h-6 rounded-full bg-[#A7D1EC]/20 flex items-center justify-center flex-shrink-0">
+                            <Zap className="w-4 h-4 text-primary" />
+                          </div>
                           <span className="font-body text-foreground">{service}</span>
                         </li>
                       ))}
@@ -183,7 +199,7 @@ const Parceiros = () => {
         </section>
 
         {/* Active Partnerships */}
-        <section className="py-16 md:py-20" aria-labelledby="parcerias-title">
+        <section className="py-16 md:py-20 bg-background" aria-labelledby="parcerias-title">
           <div className="container-custom">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -192,6 +208,9 @@ const Parceiros = () => {
               transition={{ duration: 0.5 }}
               className="text-center mb-12"
             >
+              <span className="inline-block bg-[#A7D1EC]/20 text-primary font-body text-sm px-4 py-2 rounded-full mb-4">
+                Certificações
+              </span>
               <h2 id="parcerias-title" className="text-3xl md:text-4xl text-primary mb-4">
                 Parcerias Ativas
               </h2>
@@ -210,13 +229,17 @@ const Parceiros = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className={`p-6 rounded-xl border text-center ${
                     parceria.featured 
-                      ? "bg-primary/5 border-primary/30" 
-                      : "bg-background border-border"
-                  }`}
+                      ? "bg-[#A7D1EC]/10 border-[#A7D1EC]/30" 
+                      : "bg-white border-[#A7D1EC]/20"
+                  } hover:shadow-lg hover:shadow-[#A7D1EC]/10 transition-all duration-300`}
                 >
-                  <Building2 className={`w-10 h-10 mx-auto mb-4 ${
-                    parceria.featured ? "text-primary" : "text-muted-foreground"
-                  }`} />
+                  <div className={`w-14 h-14 rounded-xl mx-auto mb-4 flex items-center justify-center ${
+                    parceria.featured ? "bg-[#A7D1EC]" : "bg-[#A7D1EC]/20"
+                  }`}>
+                    <Building2 className={`w-7 h-7 ${
+                      parceria.featured ? "text-primary" : "text-primary"
+                    }`} />
+                  </div>
                   <h3 className="text-lg text-primary mb-1">{parceria.name}</h3>
                   <p className="text-sm text-muted-foreground font-body">{parceria.type}</p>
                 </motion.div>
@@ -226,7 +249,7 @@ const Parceiros = () => {
         </section>
 
         {/* Suppliers */}
-        <section className="py-16 md:py-20 bg-muted" aria-labelledby="fornecedores-title">
+        <section className="py-16 md:py-20 bg-gradient-to-b from-muted to-[#A7D1EC]/10" aria-labelledby="fornecedores-title">
           <div className="container-custom">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -235,6 +258,9 @@ const Parceiros = () => {
               transition={{ duration: 0.5 }}
               className="text-center mb-12"
             >
+              <span className="inline-block bg-[#A7D1EC]/20 text-primary font-body text-sm px-4 py-2 rounded-full mb-4">
+                Marcas de Referência
+              </span>
               <h2 id="fornecedores-title" className="text-3xl md:text-4xl text-primary mb-4">
                 Fornecedores de Confiança
               </h2>
@@ -251,11 +277,25 @@ const Parceiros = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.05 }}
-                  className="p-6 bg-background rounded-xl border border-border hover:border-primary/30 transition-colors"
+                  className="bg-white rounded-2xl overflow-hidden border border-[#A7D1EC]/20 hover:shadow-xl hover:shadow-[#A7D1EC]/10 transition-all duration-300 group"
                 >
-                  <Cable className="w-8 h-8 text-accent mb-3" />
-                  <h3 className="text-lg text-primary mb-1">{fornecedor.name}</h3>
-                  <p className="text-sm text-muted-foreground font-body">{fornecedor.category}</p>
+                  {/* Image */}
+                  <div className="relative h-32 overflow-hidden">
+                    <img
+                      src={fornecedor.image}
+                      alt={fornecedor.name}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
+                    <div className="absolute bottom-3 left-3 w-8 h-8 bg-[#A7D1EC] rounded-lg flex items-center justify-center">
+                      <Cable className="w-4 h-4 text-primary" />
+                    </div>
+                  </div>
+                  
+                  <div className="p-5">
+                    <h3 className="text-lg text-primary mb-1">{fornecedor.name}</h3>
+                    <p className="text-sm text-muted-foreground font-body">{fornecedor.category}</p>
+                  </div>
                 </motion.div>
               ))}
             </div>
