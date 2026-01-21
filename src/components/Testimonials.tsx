@@ -100,22 +100,7 @@ const Testimonials = () => {
         </div>
 
         {/* Client Logos/Images */}
-        <motion.div initial={{
-        opacity: 0,
-        y: 20
-      }} whileInView={{
-        opacity: 1,
-        y: 0
-      }} viewport={{
-        once: true
-      }} transition={{
-        duration: 0.5,
-        delay: 0.2
-      }} className="mt-16 grid grid-cols-4 gap-4 max-w-2xl mx-auto">
-          {testimonials.map((t, i) => <div key={i} className={`aspect-square rounded-xl overflow-hidden border-2 transition-all duration-300 ${i === currentIndex ? "border-[#A7D1EC] scale-105" : "border-transparent opacity-50"}`}>
-              <img src={t.image} alt={t.name} className="w-full h-full object-cover" />
-            </div>)}
-        </motion.div>
+        
       </div>
     </section>;
 };
