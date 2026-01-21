@@ -306,9 +306,7 @@ const Contacto = () => {
                 {/* Why Contact Us */}
                 <div className="bg-primary rounded-2xl p-6 text-white relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-[#A7D1EC]/20 rounded-full blur-2xl" />
-                  <h3 className="font-body font-medium text-lg mb-4 relative z-10">
-                    Porquê contactar-nos?
-                  </h3>
+                  
                   <ul className="space-y-3 relative z-10">
                     <li className="flex items-center gap-3">
                       <div className="w-6 h-6 rounded-full bg-[#A7D1EC]/20 flex items-center justify-center">
